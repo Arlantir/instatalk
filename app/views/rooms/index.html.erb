@@ -1,11 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rooms</h1>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="mt-4 list-unstyled">
+      <h1>Rooms</h1>
+      <%= render @rooms %>
+    </ul>
 
-<ul class="mt-4 list-unstyled">
-  <%= render @rooms %>
-</ul>
+    <div class="mt-2">
+      <%= render 'rooms/form', room: @room %>
+    </div>
+  </div>
 
-<div class="mt-2">
-  <%= render 'rooms/form', room: @room %>
+  <div class="col-md-6">
+    <ul class="mt-4 list-unstyled">
+      <h1>Сейчас на сайте</h1>
+      <% @users.each do |user| %>
+        <ul class="list-unstyled">
+          <%= user.nickname %>
+        </ul>
+      <% end %>
+    </ul>
+  </div>
 </div>
