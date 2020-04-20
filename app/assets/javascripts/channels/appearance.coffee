@@ -9,4 +9,4 @@ App.appearance = App.cable.subscriptions.create "AppearanceChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    console.log('Received data: ' + + data['online'])
+    console.log('Received data: ' + data['online'])
