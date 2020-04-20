@@ -9,7 +9,4 @@ App.appearance = App.cable.subscriptions.create "AppearanceChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    console.log('Received data: ' + + data['is_online'])
-
-  away: (is_online) ->
-    @perform 'away', is_online: is_online
+    console.log('Received data: ' + + data['online'])

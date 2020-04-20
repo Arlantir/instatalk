@@ -17,7 +17,10 @@
       <h1>Сейчас на сайте</h1>
       <% @users.each do |user| %>
         <ul class="list-unstyled">
-          <%= user.nickname %>
+          <div class=""></div>
+          <%# if user.online == true %>
+            <%#= user.nickname %>
+          <%# end %>
         </ul>
       <% end %>
     </ul>
