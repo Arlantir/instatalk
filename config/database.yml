@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: development
+  database: development_instatalk
 
 test:
   <<: *default
-  database: test
+  database: test_instatalk
 
 production:
   <<: *default
