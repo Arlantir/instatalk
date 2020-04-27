@@ -1,24 +1,47 @@
-# README
+# Приложение «Чат»
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложения **instatalk** на **rails 5.1.4** и **ruby 2.6.5.**
 
-Things you may want to cover:
+**Демо**
+ 
+[https://megoinstatalk.herokuapp.com/](https://megoinstatalk.herokuapp.com/)
 
-* Ruby version
+**Установка**
 
-* System dependencies
+1. Скопировать/клонировать проект;
+2. Установить и настроить базу данных (в проекте по умолчанию используется [PostgreSQL][1])
 
-* Configuration
+**Настройка**
 
-* Database creation
+1. Установите все зависимости командой:
 
-* Database initialization
+```
+bundle install
+```
 
-* How to run the test suite
+2. Сделайте:
+   
+```
+cp databese.yml.example databese.yml
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Выполните команды:
 
-* Deployment instructions
+```
+rails db:create db:migrate
+```
 
-* ...
+4. Запуск приложения:
+ 
+```
+ rails server
+```
+
+5. В браузере перейти по адресу:
+
+```
+localhost:3000
+```
+
+
+[1]: https://www.postgresql.org/
