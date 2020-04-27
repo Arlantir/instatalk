@@ -9,6 +9,5 @@ App.appearance = App.cable.subscriptions.create "AppearanceChannel",
 
   received: (data) ->
 # Called when there's incoming data on the websocket for this channel
-    console.log('Received data: ' + data['online'])
-    user = $("#{data['user_id']}")
-    user.toggleClass 'online', data['online']
+    console.log('Received data online: ' + data.users)
+    $('#online').html data.users.map((user) -> "<li>#{user}</li>").join("\n")

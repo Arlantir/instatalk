@@ -14,14 +14,14 @@
 
   <div class="col-md-6">
     <ul class="mt-4 list-unstyled">
-      <h1 id="online">Сейчас на сайте</h1>
-      <% @users.each do |user| %>
-        <ul class="list-unstyled" data-user-id="<%= user.id %>">
-          <% if user.online == true %>
-            <%= user.nickname %>
+      <h1>Online:</h1>
+        <ul class="list-unstyled" id="online">
+          <% @users.each do |u| %>
+            <li>
+            <%= "#{u}" %>
+            </li>
           <% end %>
         </ul>
-      <% end %>
     </ul>
   </div>
 </div>
